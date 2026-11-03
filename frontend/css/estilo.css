@@ -8,6 +8,9 @@
     /* cores do tema claro */
         --fundo-cabecalho: #ddeec4; /* cabeçalho, títulos */
         --texto-cabecalho: #374D12; /* texto EM CIMA dela */
+        --nav_fundo: #AABA91; /* fundo do menu */
+        --nav_texto: #ddeec4; /* texto do menu */
+        --nav_button: #70874E; /* botão do menu */
 
         --card: #96b4c8; /* cartões, conteúdo */
         --texto-card: #223C4D; /* textos do card, destaques*/
@@ -58,16 +61,80 @@
         font: var(--fonte_secundaria);
 
         display: flex;
-        align-items: center;
-        justify-content: center;
+        gap: 30rem;
     } 
 
-    nav {
-        background-color: var(--apoio);
-
+    header h1{
+        font: var(--fonte_secundaria);
+        font-size: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
     }
 
-        .botao-cadastro {
+
+    nav {
+        background-color: var(--nav_fundo);
+    }
+
+    nav ul {
+        display: flex;
+        text-align: left;
+        list-style: none;
+
+        background-color: var(--nav_fundo);
+        color: var(--nav_texto);
+
+        font-size: 1rem;
+        gap: 15px
+    }
+
+    nav ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: var(--nav_texto);
+        background-color: var(--nav_button);
+        display: inline-block;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    
+    nav button {
+        background-color: var(--nav_fundo);
+        color: var(--nav_texto);
+        align-items: left;
+        align-content: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    /*formatações especiais para o botão da troca de tema*/
+
+   nav div {
+        display: flex;
+        margin-left: auto;
+        margin-right: 20px;
+        color: var(--nav_texto);
+        background-color: var(--nav_fundo);
+        text-decoration: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+
+    .botao-cadastro {
         background-color: var(--card);
         align-items: left;
         align-content: left;
@@ -100,12 +167,14 @@
         background-color: var(--fundo);
         color: var(--texto);
     }
+
     section {
         margin: 0;
         padding: 0;
         background-color: var(--fundo);
         color: var(--texto);
     }
+
     ul {
         margin: 0;
         padding: 0;
@@ -126,11 +195,13 @@
         padding: 0;
         font-size: 2.25rem;
     }
+
     h2 {
         margin: 0;
         padding: 0;
         font-size: 1.75rem;
     }
+
     h3 {
         margin: 0;
         padding: 0;
@@ -142,6 +213,7 @@
         padding: 0;
         color: var(--texto);
     }
+
     a {
         text-decoration: none;
         color: var(--texto-apoio);
@@ -167,11 +239,13 @@
         border-color: 0.15s ease-in-out; 
         box-shadow: 0.15s ease-in-out;
     }
+
     img {
         height: auto;
         max-width: 100%;
         display: flex;
     }
+    
     /* para rolagem horizontal em dispositivos moveis */
     .table-container {
         overflow-x: auto;
@@ -579,8 +653,7 @@ button:focus {
         flex: 1 1 100%;
     }
 
-    table {
-        width: 100%;
+    table {        width: 100%;
     }
 }
 

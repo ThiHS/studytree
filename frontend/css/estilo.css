@@ -481,6 +481,24 @@ textarea {
     font-family: inherit;
     font-size: 1rem;
 }
+input[type="password"] {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    padding: 10px 12px;
+    border: 1px solid var(--texto-card);
+    border-radius: 4px;
+
+    background-color: var(--fundo-cabecalho);
+    color: var(--texto-card);
+
+    font-family: inherit;
+    font-size: 1rem;
+}
 
 textarea {
     resize: vertical;

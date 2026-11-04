@@ -166,3 +166,20 @@ if (formDisciplina) {
   });
 }
 
+const botaoTema = document.querySelector("#botao-tema");
+const temaNoite = document.querySelector("#tema-escuro");
+
+function trocarTema() {
+  temaNoite.disabled = !temaNoite.disabled;
+
+  // O rótulo acompanha o estado: o botão diz o que ele VAI fazer.
+  if (temaNoite.disabled) {
+    botaoTema.textContent = "⏾";
+  } else {
+    botaoTema.textContent = "☼";
+  }
+}
+
+// ATENÇÃO: trocarTema, SEM parênteses. Com parênteses — trocarTema() — a
+// função rodaria uma vez, agora, ao carregar, e o clique não faria nada.
+botaoTema.addEventListener("click", trocarTema);

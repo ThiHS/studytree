@@ -13,8 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
        
-    <link rel="stylesheet" href="css/tema-escuro.css">
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/tema-escuro.css" id="tema-escuro" disabled>
+
     <script src="js/script.js" defer></script>
     </head>
 
@@ -43,7 +44,7 @@
             <li> <button class="cad-curso"><a href="cad_curso.php">Curso</a></button></li>
 
             <div class="botao-tema">
-                <li> <button> Tema claro</button> </li>
+                <button type="button" id="botao-tema" id="botao-tema" class="botao-tema">⏾</button>
             </div>
 
         </ul>

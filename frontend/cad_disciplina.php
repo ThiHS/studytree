@@ -90,3 +90,7 @@
       </section>
     
     </main>
+
+<?php
+    require_once("footer_padrao.php"); 
+?>

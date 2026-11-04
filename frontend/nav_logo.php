@@ -40,7 +40,7 @@
         <ul>
             <li> <button><a href="cad_usuario.php">Cadastre-se Aqui!</a></button></li>
             <li> <button><a href="cad_disciplina.php">Cadastrar disciplinas</a></button></li>
-            <li><button class="cad-curso"><a href="cad_curso.php">Curso</a></button></li>
+            <li> <button class="cad-curso"><a href="cad_curso.php">Curso</a></button></li>
 
             <div class="botao-tema">
                 <li> <button> Tema claro</button> </li>

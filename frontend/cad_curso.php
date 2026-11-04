@@ -46,5 +46,7 @@
       </section>
     
     </main>
-</body>
-</html>
+    
+<?php
+    require_once("footer_padrao.php"); 
+?>

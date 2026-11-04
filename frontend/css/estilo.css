@@ -15,6 +15,10 @@
         --card: #96b4c8; /* cartões, conteúdo */
         --texto-card: #223C4D; /* textos do card, destaques*/
 
+        --table-listra: #B6CBD9; /*listas das tabelas */
+        --table-listra2: #D5E1E9; /* listas das tabelas 2 */
+        --table-houver: #527993; /* tabelas ao passar o mouse */
+
         --apoio: #2B6770; /* botões, destaques */
         --texto-apoio: #E4F0F2; /* botões, destaques */
 
@@ -162,29 +166,19 @@
     }
 
     main {
-        margin: 0;
-        padding: 0;
         background-color: var(--fundo);
         color: var(--texto);
     }
 
     section {
-        margin: 0;
-        padding: 0;
         background-color: var(--fundo);
         color: var(--texto);
     }
 
     ul {
-        margin: 0;
-        padding: 0;
-
         display: flex;
         text-align: left;
         list-style: none;
-
-        background-color: var(--card);
-        color: var(--texto-card);
 
         font-size: 1rem;
         gap: 15px
@@ -250,6 +244,7 @@
     .table-container {
         overflow-x: auto;
     }
+    
     table {
        font: var(--fonte-principal);
        text-align: center;
@@ -274,6 +269,7 @@
        margin: 0 auto;
        text-align: center;
        border-radius: 0.375rem;
+       
     }
 
     thead th {
@@ -282,20 +278,20 @@
     }
     
     tbody tr:nth-child(even) {
-       background-color: var(--fundo-cabecalho);
-       color: var(--texto-cabecalho);
+       background-color: var(--table-listra);
+       color: var(--texto-card);
        text-align: center;
     }
     
     tbody tr:nth-child(odd) {
-      background-color: var(--fundo);
-      color: var(--texto);
+      background-color: var(--table-listra2);
+      color: var(--texto-card);
       text-align: center;
     }
     
     tbody tr:hover {
-      background-color: var(--apoio);
-      color: var(--texto-apoio);
+      background-color: var(--table-houver);
+      color: var(--texto-card);
     }
 
    #formulario1 {
@@ -345,22 +341,49 @@
     }
 
     footer {
-        background-color: var(--apoio) ;
+        background-color: var(--nav_fundo);
+        color: var(--texto-cabecalho);
         display:flex;
         flex-direction: column;
-        height: 12rem;
+        height: 10rem;
         align-items: center;
         gap: 1rem;
         margin-top: 0.5rem;
     }
 
-    p {
-
-        color: var(--texto-apoio);
-
+    footer p {
+        color: var(--texto-cabecalho);
+        font-size: 0.75rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 1.50rem;   
+        padding-top: 1rem;
+        padding-right: 1rem;
     }
 
+    footer ul {
+        color: var(--texto-cabecalho);
+        font-size: 1rem;
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+        padding-right: 6rem;
+    }
+    
+    footer a {
+        color: var(--nav_texto);
+        background-color: var(--nav_button);
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 0.50rem;
+    }
+    
+
 /*testes */
+
     .principal {
         background-color: var(--fundo-cabecalho);
         color: var(--texto-cabecalho);
@@ -394,279 +417,251 @@
         margin-bottom: 10px; 
     }
 
-     /*Aba de cadastro*/
+/*Estilizações do cadastro*/
 
-.cadastro-layout {
-    flex: 1 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-    gap: var(--espaco);
-    padding: var(--espaco);
-    width: 100%;
-    max-width: 90rem;
-    margin-inline: auto;
-}
+    .cadastro-layout {
+        flex: 1 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+        gap: var(--espaco);
+        padding: var(--espaco);
+        width: 100%;
+        max-width: 90rem;
+        margin-inline: auto;
+    }
 
-/* Metade esquerda da aba cadastro*/
+    .cadastro-usuario {
+        flex: 1 1 24rem;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+        background-color: var(--fundo);
+    }
+    
+    .cadastro-usuario p{
+        font-size: 1.5rem;
+        text-align: left;
+        margin: 1rem 0 2rem 0;
+        width: 100%;
+        max-width: 30rem;
+    }
 
-article {
-    flex: 1 1 24rem;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0;
-    background-color: var(--fundo);
-}
+    .cadastro-usuario section h2{
+        font-size: 1.75rem;
+        text-align: left;
+        height: 2.5rem;
+    }
 
-.slogan-cadastro {
-    font-size: 1.5rem;
-    text-align: left;
-    margin: 0;
-    position: relative;
-}
-
-.frase-cadastro {
-    font-size: 1.5rem;
-    text-align: left;
-    margin: 1rem 0 2rem 0;
-    width: 100%;
-    max-width: 30rem;
-    position: relative;
-}
-
-.logo-cadastro {
-    display: flex;
-    margin: 0;
-    width: 100%;
-    max-width: 30rem;
-    background-color: var(--fundo);
-    height: auto;
-    overflow: hidden;
-}
-
-.logo-cadastro img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-.redirect-login {
-    font-size: 1.5rem;
-    text-align: left;
-    margin: 2rem 0 0 0;
-    position: relative;
-    border: none;
-}
-
-.botao-login {
-    background-color: var(--fundo);
-    align-items: left;
-    align-content: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    margin-left: -6rem;
-    height: auto;
-    width: 20rem;
-}
-
-
+    .botao-login {
+        background-color: var(--fundo);
+        align-items: left;
+        align-content: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin-left: -6rem;
+        height: auto;
+        width: 20rem;
+    }
 
 /* Metade direita com o formulário */
 
-#cadastro {
-    flex: 1 1 24rem;
-    min-width: 0;
-    max-width: 36rem;
-    margin: 0 auto;
-    background-color: var(--fundo);
-    display: flex;
-    flex-direction: column;
-}
-
+    #cadastro {
+        flex: 1 1 24rem;
+        min-width: 0;
+        max-width: 36rem;
+        margin: 0 auto;
+        background-color: var(--fundo);
+        display: flex;
+        flex-direction: column;
+    }
+    
 /* Formulário de cadastro */
 
-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1rem;
-    background-color: var(--card);
-    color: var(--texto-card);
-    padding: clamp(1rem, 3vw, 1.5rem);
-    border-radius: 0.5rem;
-    border-top: 4px solid var(--texto-card);
-}
-
-fieldset {
-    min-width: 0;
-    border: 1px solid var(--texto-card);
-    border-radius: 6px;
-    background-color: var(--fundo);
-    padding: 18px 20px 6px;
-    margin-bottom: 0;
-}
-
-legend {
-    color: var(--texto-card);
-    font-weight: 600;
-    padding: 0 8px;
-}
-
-form div {
-    margin-bottom: 16px;
-}
-
-label {
-    display: block;
-    font-weight: 600;
-    font-size: 0.9375rem;
-    margin-bottom: 5px;
-}
-
-/* Seletor de atributo: escolhe o input pelo type.
-   Sem isso, "input { width: 100% }" esticaria também o checkbox. */
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="number"],
-select,
-textarea {
-    width: 100%;
-    max-width: 100%;
-    padding: 10px 12px;
-    border: 1px solid var(--texto-card);
-    border-radius: 4px;
-
-    /* Sem estas duas linhas o campo fica com o branco de fábrica do
-       navegador — e no tema escuro isso vira texto claro sobre fundo
-       branco, ou seja, invisível. */
-
-    background-color: var(--fundo-cabecalho);
-    color: var(--texto-card);
-
-    /* Campo de formulário não herda a fonte do body — tem de pedir. */
-
-    font-family: inherit;
-    font-size: 1rem;
-}
-
-textarea {
-    resize: vertical;
-    min-height: 7.5rem;
-}
-
-input[type="checkbox"] {
-    width: auto;
-    margin-right: 8px;
-}
-
-input[type="checkbox"] + label {
-    display: inline;
-    font-weight: 400;
-}
-
-/* :focus é acessibilidade, não enfeite: é como quem navega por Tab sabe
-   onde está. Nunca apague o contorno sem pôr outra marca no lugar. */
-
-input:focus,
-select:focus,
-textarea:focus {
-    outline: 3px solid var(--texto-apoio);
-    outline-offset: 1px;
-    border-color: var(--texto-card);
-}
-
-form > div:last-child {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-form > div:last-child .aviso {
-    flex: 1 1 100%;
-}
-
-button {
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 12px 28px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button[type="submit"] {
-    background-color: var(--fundo-cabecalho);
-    color: var(--texto-card);
-    outline: 1px solid var(--texto-card);
-}
-
-button[type="submit"]:hover {
-    background-color: var(--texto-card);
-    color: var(--card);
-}
-
-button[type="reset"] {
-    background-color: var(--fundo-cabecalho);
-    color: var(--texto-card);
-    border: 1px solid var(--texto-card);
-    margin-left: 0;
-}
-
-button:focus {
-    outline: 3px solid var(--texto-card);
-    outline-offset: 2px;
-}
-
-@media (max-width: 30rem) {
-    fieldset {
-        padding: 14px 12px 4px;
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        background-color: var(--card);
+        color: var(--texto-card);
+        padding: clamp(1rem, 3vw, 1.5rem);
+        border-radius: 0.5rem;
+        border-top: 4px solid var(--texto-card);
     }
 
-    form > div:last-child button {
+    fieldset {
+        min-width: 0;
+        border: 1px solid var(--texto-card);
+        border-radius: 6px;
+        background-color: var(--fundo);
+        padding: 18px 20px 6px;
+        margin-bottom: 0;
+    }
+
+    legend {
+        color: var(--texto-card);
+        font-weight: 600;
+        padding: 0 8px;
+    }
+
+    form div {
+        margin-bottom: 16px;
+    }
+
+    label {
+        display: block;
+        font-weight: 600;
+        font-size: 0.9375rem;
+        margin-bottom: 5px;
+    }
+
+    /* Seletor de atributo: escolhe o input pelo type.
+    Sem isso, "input { width: 100% }" esticaria também o checkbox. */
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    textarea {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px 12px;
+        border: 1px solid var(--texto-card);
+        border-radius: 4px;
+
+        /* Sem estas duas linhas o campo fica com o branco de fábrica do
+        navegador — e no tema escuro isso vira texto claro sobre fundo
+        branco, ou seja, invisível. */
+
+        background-color: var(--fundo-cabecalho);
+        color: var(--texto-card);
+
+        /* Campo de formulário não herda a fonte do body — tem de pedir. */
+
+        font-family: inherit;
+        font-size: 1rem;
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 7.5rem;
+    }
+
+    input[type="checkbox"] {
+        width: auto;
+        margin-right: 8px;
+    }
+
+    input[type="checkbox"] + label {
+        display: inline;
+        font-weight: 400;
+    }
+
+    /* :focus é acessibilidade, não enfeite: é como quem navega por Tab sabe
+    onde está. Nunca apague o contorno sem pôr outra marca no lugar. */
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: 3px solid var(--texto-apoio);
+        outline-offset: 1px;
+        border-color: var(--texto-card);
+    }
+
+    form > div:last-child {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    form > div:last-child .aviso {
         flex: 1 1 100%;
     }
 
-    table {        width: 100%;
+    button {
+        color: var(--texto-card);
+        background-color: var(--apoio);
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 12px 28px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
     }
-}
 
-#erro-matricula {
-    color: var(--texto);
-    display: none;
-}
+    button[type="submit"] {
+        background-color: var(--fundo-cabecalho);
+        color: var(--texto-card);
+        outline: 1px solid var(--texto-card);
+    }
+
+    button[type="submit"]:hover {
+        background-color: var(--texto-card);
+        color: var(--card);
+    }
+
+    button[type="reset"] {
+        background-color: var(--fundo-cabecalho);
+        color: var(--texto-card);
+        border: 1px solid var(--texto-card);
+        margin-left: 0;
+    }
+
+    button:focus {
+        outline: 3px solid var(--texto-card);
+        outline-offset: 2px;
+    }
+
+    @media (max-width: 30rem) {
+        fieldset {
+            padding: 14px 12px 4px;
+        }
+
+        form > div:last-child button {
+            flex: 1 1 100%;
+        }
+
+        table {        width: 100%;
+        }
+    }
+
+    #erro-matricula {
+        color: var(--texto);
+        display: none;
+    }
 
 
 
-/* Aba de cadastro de disciplinas */
+    /* Aba de cadastro de disciplinas */
 
-#cadastro-disciplina {
-    flex: 1 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-    gap: var(--espaco);
-    padding: var(--espaco);
-    width: 100%;
-    max-width: 90rem;
-    margin-inline: auto;
-}
+    #cadastro-disciplina {
+        flex: 1 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+        gap: var(--espaco);
+        padding: var(--espaco);
+        width: 100%;
+        max-width: 90rem;
+        margin-inline: auto;
+    }
 
-.titulo-cad-disciplina {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
+    .titulo-cad-disciplina {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
 
-#checklist-materia {
-    display: none;
-}
+    #checklist-materia {
+        display: none;
+    }

@@ -57,7 +57,7 @@
         </table>
     </section>   
     <!--
-         6.   Formulário e rodapé — Guilherme Rocha
+         6.   Formulário — Guilherme Rocha
     -->
         <section>
         <form id="formulario1">
@@ -79,15 +79,6 @@
         </form>
         </section>
 
-        <section>
-
-            <footer>
-               <h2><p>StudyTree</p></h2>
-               <h3><p>Membros</p></h3>
-               <p>Guilherme, Emanuella, Thiago, Angeline, Arthur, Isabella.</p>
-            </footer>
-
-        </section>
-
-</body>
-</html>
+<?php
+    require_once("footer_padrao.php"); 
+?>

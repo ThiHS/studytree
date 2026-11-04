@@ -13,9 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
        
+    <link rel="stylesheet" href="css/tema-escuro.css">
     <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="css/tema-escuro.css" id="tema-escuro" disabled>
-
     <script src="js/script.js" defer></script>
     </head>
 
@@ -43,10 +42,11 @@
             <li> <button><a href="index.php">Voltar à Página Inicial</a></button>
             <li> <button><a href="cad_usuario.php">Cadastre-se Aqui!</a></button></li>
             <li> <button><a href="cad_disciplina.php">Cadastrar disciplinas</a></button></li>
-            <li> <button class="cad-curso"><a href="cad_curso.php">Curso</a></button></li>
+            <li> <button><a href="cad_materias.php">Cadastrar materias</a></button></li>
+            <li><button class="cad-curso"><a href="cad_curso.php">Cadastrar cursos</a></button></li>
 
             <div class="botao-tema">
-                <button type="button" id="botao-tema" class="botao-tema"> Tema escuro</button>
+                <li> <button> Tema claro</button> </li>
             </div>
 
         </ul>

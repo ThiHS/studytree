@@ -73,6 +73,7 @@ CREATE TABLE IF NOT EXISTS `studytree`.`permissoes` (
   `id_permissao` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nome_permissao` VARCHAR(100) NOT NULL,
   `descricao` VARCHAR(300) NULL,
+  `cod_permissao` int NOT NULL,
   PRIMARY KEY (`id_permissao`))
 ENGINE = InnoDB;
 

@@ -2,16 +2,12 @@
 <?php
     // recebe o formulário de cad_curso.php, 
     // valida e insere no banco de dados.
-    // DIR é uma constante mágica do PHP que retorna o diretório
+    // DIR é uma constante que retorna o diretório
     // do arquivo atual onde eles estiver.
     require_once __DIR__ . "/../../backend/utils/conec.php";
     $titulo = "Cadastro de cursos";
     require_once __DIR__ . "/../assets/utils/nav_padrao.php";
-    // mostro os cursos cadastreados em ordem decrescente, 
-    // para que o usuário veja se o curso que deseja cadastrar já existe.
-    $curso = bd_select(
-        "SELECT id_curso, nome, descricao FROM cursos ORDER BY id_curso DESC"
-    );
+    
 ?>
     
   <main class="cadastro-layout">
@@ -55,29 +51,6 @@
           </div>
         </form>
 
-      </section>
-
-      <section class="lista-cursos">
-       <h3>Cursos cadastrados</h3>
-       
-         <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Nome</th>
-              <th>Descrição</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php foreach ($curso as $row): ?>
-              <tr>
-                <td><?= htmlspecialchars((string) $row["id_curso"]) ?></td>
-                <td><?= htmlspecialchars($row["nome"]) ?></td>
-                <td><?= htmlspecialchars((string) $row["descricao"]) ?></td>
-              </tr>
-             <?php endforeach; ?>
-          </tbody>
-         </table>
       </section>
     </main>
 </body>

@@ -39,7 +39,7 @@ try {
     }
 } catch (PDOException $e) {
     $ok = false;
-    exit("Erro no banco: " . $e->getMessage());
+    error_log("Erro no banco: " . $e->getMessage());
 }
 
 header("Location: /studytree/frontend/curso/cad_curso.php");

@@ -1,7 +1,7 @@
 <?php
 
 try {
-    require_once 'conec.php';
+    require_once __DIR__ . '/conec.php';
 
     echo "Conectou com o banco de dados";
 

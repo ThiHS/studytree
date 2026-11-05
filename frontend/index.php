@@ -1,6 +1,6 @@
 
 <?php
-    require_once("nav_logo.php"); 
+    require_once __DIR__ . "/assets/utils/nav_logo.php";
 ?>
 
     <main>
@@ -10,11 +10,11 @@
 
     <section>
         <p>essas são as logos do nosso trabalho</p>
-        <img src="img/logos/logo-clara.png" alt="">
-        <img src="img/logos/logo-escura.png" alt="">
+        <img src="/studytree/frontend/assets/img/logos/logo-clara.png" alt="">
+        <img src="/studytree/frontend/assets/img/logos/logo-escura.png" alt="">
         
-        <a href="teste_claro.html">página clara</a>
-        <a href="teste_escuro.html">página escura </a>
+        <a href="/studytree/testes/teste_claro.html">página clara</a>
+        <a href="/studytree/testes/teste_escuro.html">página escura </a>
     </section>
 
     <!--
@@ -80,5 +80,5 @@
         </section>
 
 <?php
-    require_once("footer_padrao.php"); 
+    require_once __DIR__ . "/assets/utils/footer_padrao.php";
 ?>

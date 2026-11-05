@@ -3,7 +3,7 @@
 // Recebe os dados do formulário de cadastro da matéria, 
 // valida e insere no banco de dados.
 
-require_once __DIR__ . "/tratareq.php";
+require_once __DIR__ . "/../utils/tratareq.php";
 exigir_post();
 
 // variáveis vindas do formulario, o parametro ?? verifica se a variavel foi definida
@@ -39,5 +39,5 @@ try {
     exit("Erro no banco: " . $e->getMessage());
 }
 
-header("Location: ../frontend/cad_materias.php");
+header("Location: /studytree/frontend/materia/cad_materias.php");
 exit;

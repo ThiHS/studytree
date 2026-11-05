@@ -1,5 +1,5 @@
 <?php
-    require_once("conec.php");
+    require_once(__DIR__ . "/../utils/conec.php");
     session_start();
 
     $sql="
@@ -18,5 +18,5 @@
     $_SESSION['usuario']['telefone'] = $res['telefone'];
     $_SESSION['usuario']['num_matricula'] = $res['num_matricula'];
 
-    header("Location: ../frontend/login.php");
+    header("Location: /studytree/frontend/login.php");
 ?>

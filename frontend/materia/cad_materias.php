@@ -3,16 +3,12 @@
     // valida e insere no banco de dados.
     // DIR é uma constante mágica do PHP que retorna o diretório
     // do arquivo atual onde eles estiver.
-    require_once __DIR__ . "/../backend/conec.php";
+  
     $titulo = "Cadastro de matérias";
-    require_once("nav_padrao.php");
+    require_once __DIR__ . "/../assets/utils/nav_padrao.php";
     // mostro as matérias cadastreadas em ordem decrescente, 
     // para que o usuário veja se a matéria que deseja cadastrar já existe.
-    $materias = bd_select(
-        "SELECT id_materia, nome_materia, descricao_materias
-         FROM materias
-         ORDER BY id_materia DESC"
-    );
+
 ?>
     
   <main class="cadastro-layout">
@@ -30,7 +26,7 @@
 
     <section id="cadastro-disciplina">
 
-        <form action="../backend/materia.php" method="POST" id="form-materia">
+        <form action="/studytree/backend/materia/confere_materia.php" method="POST" id="form-materia">
           <fieldset>
             <legend>Preencha os campos abaixo:</legend>
 
@@ -56,29 +52,6 @@
           </div>
         </form>
 
-      </section>
-
-      <section class="lista-materias">
-       <h3>Matérias cadastradas</h3>
-       
-         <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Nome</th>
-              <th>Descrição</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php foreach ($materias as $row): ?>
-              <tr>
-                <td><?= htmlspecialchars((string) $row["id_materia"]) ?></td>
-                <td><?= htmlspecialchars($row["nome_materia"]) ?></td>
-                <td><?= htmlspecialchars((string) $row["descricao_materias"]) ?></td>
-              </tr>
-             <?php endforeach; ?>
-          </tbody>
-         </table>
       </section>
     </main>
 </body>

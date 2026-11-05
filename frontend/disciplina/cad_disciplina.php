@@ -1,6 +1,6 @@
 <?php
     $titulo = "Cadastro de disciplinas";
-    require_once("nav_padrao.php"); 
+    require_once __DIR__ . "/../assets/utils/nav_padrao.php";
 ?>
 
     <main class="cadastro-layout">
@@ -18,7 +18,7 @@
 
     <section id="cadastro-disciplina">
 
-        <form action="disciplina.php" method="POST" id="form-disciplina">
+        <form action="/studytree/backend/disciplina/confere_disciplina.php" method="POST" id="form-disciplina">
           <fieldset>
             <legend>Preencha os campos abaixo:</legend>
 
@@ -92,5 +92,5 @@
     </main>
 
 <?php
-    require_once("footer_padrao.php"); 
+    require_once __DIR__ . "/../assets/utils/footer_padrao.php";
 ?>

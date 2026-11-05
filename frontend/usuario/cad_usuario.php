@@ -1,6 +1,6 @@
 <?php
     $titulo = "Cadastro de usuários";
-    require_once("nav_padrao.php"); 
+    require_once __DIR__ . "/../assets/utils/nav_padrao.php";
 ?>
 
 <main class="cadastro-layout">
@@ -25,7 +25,7 @@
     <section>
 
       <h2>Já tem uma conta? </h2>
-      <button class="botao-login"><a href="login.html">Faça login aqui</a></button>
+      <button class="botao-login"><a href="/studytree/frontend/login.php">Faça login aqui</a></button>
 
     </section>
 
@@ -33,7 +33,7 @@
 
   <section id="cadastro">
 
-    <form action="usuario.php" method="POST" id="form">
+    <form action="/studytree/backend/usuario/confere_usuario.php" method="POST" id="form">
       <fieldset>
 
         <legend>Preencha seus dados abaixo:</legend>
@@ -108,5 +108,5 @@
 </main>
 
 <?php
-    require_once("footer_padrao.php"); 
+    require_once __DIR__ . "/../assets/utils/footer_padrao.php";
 ?>

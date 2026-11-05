@@ -1,5 +1,5 @@
 <?php
-    require_once("../backend/conec.php");
+    require_once __DIR__ . "/../../backend/utils/conec.php";
 
     $sql = "SELECT * FROM permissoes;";
     $permissoes_bd = bd_select($sql);

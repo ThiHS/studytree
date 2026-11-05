@@ -4,9 +4,9 @@
     // valida e insere no banco de dados.
     // DIR é uma constante mágica do PHP que retorna o diretório
     // do arquivo atual onde eles estiver.
-    require_once __DIR__ . "/../backend/conec.php";
+    require_once __DIR__ . "/../../backend/utils/conec.php";
     $titulo = "Cadastro de cursos";
-    require_once("nav_padrao.php");
+    require_once __DIR__ . "/../assets/utils/nav_padrao.php";
     // mostro os cursos cadastreados em ordem decrescente, 
     // para que o usuário veja se o curso que deseja cadastrar já existe.
     $curso = bd_select(
@@ -29,7 +29,7 @@
 
     <section id="cadastro-disciplina">
 
-        <form action="../backend/curso.php" method="POST" id="form-curso">
+        <form action="/studytree/backend/curso/confere_curso.php" method="POST" id="form-curso">
           <fieldset>
             <legend>Preencha os campos abaixo:</legend>
 

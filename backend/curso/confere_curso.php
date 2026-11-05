@@ -1,10 +1,10 @@
 <?php
-// Recebe o formulário de cad_curso.php
-// Recebe os dados do formulário de cadastro de curso, 
-// valida e insere no banco de dados.
-// 
-require_once __DIR__ . "/tratareq.php";
-exigir_post();
+require_once __DIR__ . "/../utils/conec.php";
+
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    http_response_code(405);
+    exit("Requisição com metodo errado.");
+}
 
 $nome = $_POST["nome"];
 $desc = $_POST["desc"];
@@ -42,5 +42,5 @@ try {
     exit("Erro no banco: " . $e->getMessage());
 }
 
-header("Location: ../frontend/cad_curso.php");
+header("Location: /studytree/frontend/curso/cad_curso.php");
 exit;

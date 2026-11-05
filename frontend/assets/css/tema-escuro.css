@@ -8,9 +8,18 @@
     /* cores do tema escuro */
         --fundo-cabecalho: #05152b; /* cabeçalho, títulos */
         --texto-cabecalho: #7992B5; /* texto EM CIMA dela */
+        --nav_fundo: #1E395E; /* fundo do menu */
+        --nav_texto: #c4deee; /* texto do menu */
+        --nav_button: #4C6991; /* botão do menu */
 
         --card: #233520; /* cartões, conteúdo */
         --texto-card: #A9C1A5; /* textos do card, destaques */
+        --form-border: #293d26; /* borda do formulário */
+        --form-fundo: #c3dabf; /* fundo do formulário */
+
+        --table-listra: #42523F; /*listas das tabelas */
+        --table-listra2: #576654; /* listas das tabelas 2 */
+        --table-houver: #527993; /* tabelas ao passar o mouse */
 
         --apoio: #42523F; /* botões, destaques */
         --texto-apoio: #A2CA9B; /* botões, destaques */

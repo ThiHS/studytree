@@ -21,20 +21,17 @@
 
 <body>
 
-    <header>
+<header>
 
-        <div class="miniL">
+    <div class="miniL">
+        <img src="/studytree/frontend/assets/img/logos/pequena.png" alt="logo_pequena" class="logopequena">
+    </div>
 
-            <img src="/studytree/frontend/assets/img/logos/pequena.png" alt="logo_pequena">
+    <h1>
+        <img src="/studytree/frontend/assets/img/logos/logo-clara.png" alt="Logo Principal" id="logotema">
+    </h1>
 
-        </div>
-
-        <h1>
-           <img src="/studytree/frontend/assets/img/logos/logo-clara.png" alt="">
-
-        </h1>
-
-    </header>
+</header>
         
     <nav>
 

@@ -23,11 +23,9 @@
 
     <header>
 
-        <div class="miniL">
-
-            <img src="/studytree/frontend/assets/img/logos/pequena.png" alt="logo_pequena">
-
-        </div>
+    <div class="miniL">
+        <img src="/studytree/frontend/assets/img/logos/pequena.png" alt="logo_pequena" class="logopequena">
+    </div>
 
         
         <h1>
@@ -40,11 +38,11 @@
     <nav>
 
         <ul>
+            <li> <button ><a href="/studytree/frontend/index.php">Voltar para a página inicial</a></button></li>
             <li> <button><a href="/studytree/frontend/usuario/cad_usuario.php">Cadastre-se Aqui!</a></button></li>
             <li> <button><a href="/studytree/frontend/disciplina/cad_disciplina.php">Cadastrar disciplinas</a></button></li>
             <li> <button><a href="/studytree/frontend/materia/cad_materias.php">Cadastrar materias</a></button></li>
             <li> <button ><a href="/studytree/frontend/curso/cad_curso.php">Cadastrar cursos</a></button></li>
-
             <div class="botao-tema">
                 <button type="button" id="botao-tema" id="botao-tema" class="botao-tema">⏾</button>
             </div>

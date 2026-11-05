@@ -12,8 +12,10 @@
         --nav_texto: #ddeec4; /* texto do menu */
         --nav_button: #70874E; /* botão do menu */
 
-        --card: #96b4c8; /* cartões, conteúdo */
-        --texto-card: #223C4D; /* textos do card, destaques*/
+        --card: #a6c2d5; /* cartões, conteúdo */
+        --texto-card: #223C4D; /* textos do card, destaques*/  
+        --form-border: #4c7996; /* borda do formulário */
+        --form-fundo: #e4f0f2; /* fundo do formulário */
 
         --table-listra: #B6CBD9; /*listas das tabelas */
         --table-listra2: #D5E1E9; /* listas das tabelas 2 */
@@ -65,7 +67,7 @@
         font: var(--fonte_secundaria);
 
         display: flex;
-        gap: 30rem;
+        gap: 32rem;
     } 
 
     header h1{
@@ -76,7 +78,6 @@
         justify-content: center;
         text-align: center;
     }
-
 
     nav {
         background-color: var(--nav_fundo);
@@ -140,34 +141,6 @@
         background-color: var(--nav_button);
         font-size: 2rem;
         border-radius: 4rem;
-
-    }
-
-    .botao-cadastro {
-        background-color: var(--card);
-        align-items: left;
-        align-content: left;
-        border: none;
-        outline: none;
-        cursor: pointer;
-    }
-
-    .voltar-cadastro {
-        background-color: var(--card);
-        align-items: left;
-        align-content: left;
-        border: none;
-        outline: none;
-        cursor: pointer;
-    }
-
-    .cad-disciplina {
-        background-color: var(--card);
-        align-items: left;
-        align-content: left;
-        border: none;
-        outline: none;
-        cursor: pointer;
     }
 
     main {
@@ -300,7 +273,6 @@
     }
 
    #formulario1 {
-        background-color: var(--card) ;
         background-size: 2rem;
         display:flex;
         background-position-x: center;
@@ -310,7 +282,6 @@
         width:30rem;
         margin:auto;
         border-radius: 2rem;
-        color: var(--texto-card);
         gap: 1rem;
 
     }
@@ -329,8 +300,6 @@
     }
 
     
-
-
     span{
         color:var(--texto-card);
     }
@@ -340,9 +309,6 @@
     legend {
         display: flex;
         justify-content: center;
-
-
-        
     }
 
     footer {
@@ -373,7 +339,7 @@
         display: flex;
         gap: 3rem;
         justify-content: center;
-        padding-right: 6rem;
+        padding-right: 9.25rem;
     }
     
     footer a {
@@ -493,18 +459,18 @@
         flex-direction: column;
         align-items: stretch;
         gap: 1rem;
-        background-color: var(--card);
+        background-color: var(--form-border);
         color: var(--texto-card);
         padding: clamp(1rem, 3vw, 1.5rem);
         border-radius: 0.5rem;
-        border-top: 4px solid var(--texto-card);
+        border: 4px solid var(--form-border);
     }
 
     fieldset {
         min-width: 0;
-        border: 1px solid var(--texto-card);
+        border: 1px solid var(--card);
+        background-color: var(--card);
         border-radius: 6px;
-        background-color: var(--fundo);
         padding: 18px 20px 6px;
         margin-bottom: 0;
     }
@@ -545,7 +511,7 @@
         navegador — e no tema escuro isso vira texto claro sobre fundo
         branco, ou seja, invisível. */
 
-        background-color: var(--fundo-cabecalho);
+        background-color: var(--form-fundo);
         color: var(--texto-card);
 
         /* Campo de formulário não herda a fonte do body — tem de pedir. */
@@ -604,9 +570,10 @@
     }
 
     button[type="submit"] {
-        background-color: var(--fundo-cabecalho);
-        color: var(--texto-card);
-        outline: 1px solid var(--texto-card);
+        background-color: var(--apoio);
+        color: var(--texto-apoio);
+        outline: 1px solid var(--form-border);
+        
     }
 
     button[type="submit"]:hover {
@@ -615,14 +582,14 @@
     }
 
     button[type="reset"] {
-        background-color: var(--fundo-cabecalho);
-        color: var(--texto-card);
-        border: 1px solid var(--texto-card);
+        background-color: var(--apoio);
+        color: var(--texto-apoio);
+        border: 1px solid var(--form-border);
         margin-left: 0;
     }
 
     button:focus {
-        outline: 3px solid var(--texto-card);
+        outline: 3px solid var(--apoio);
         outline-offset: 2px;
     }
 

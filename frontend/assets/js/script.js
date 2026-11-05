@@ -168,6 +168,8 @@ if (formDisciplina) {
 
 const botaoTema = document.querySelector("#botao-tema");
 const temaNoite = document.querySelector("#tema-escuro");
+const logotema = document.querySelector("#logotema");
+const logopequena = document.querySelector(".logopequena");
 
 function trocarTema() {
   temaNoite.disabled = !temaNoite.disabled;
@@ -175,8 +177,14 @@ function trocarTema() {
   // O rótulo acompanha o estado: o botão diz o que ele VAI fazer.
   if (temaNoite.disabled) {
     botaoTema.textContent = "⏾";
+    logotema.src = "/studytree/frontend/assets/img/logos/logo-clara.png";
+    logopequena.src = "/studytree/frontend/assets/img/logos/pequena.png";
+    
   } else {
     botaoTema.textContent = "☼";
+    logotema.src = "/studytree/frontend/assets/img/logos/logo-escura.png";
+    logopequena.src = "/studytree/frontend/assets/img/logos/pequena2.png";
+  
   }
 }
 

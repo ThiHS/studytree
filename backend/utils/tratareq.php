@@ -13,3 +13,9 @@ function exigir_post() {
     }
 }
 
+function exigir_get() {
+    if ($_SERVER["REQUEST_METHOD"] !== "GET") {
+        http_response_code(405);
+        exit("Requisição com metodo errado.");
+    }
+}

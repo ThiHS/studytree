@@ -1,13 +1,12 @@
 <?php
     // recebe o formulário de cad_materias.php, 
     // valida e insere no banco de dados.
-    // DIR é uma constante mágica do PHP que retorna o diretório
+    // DIR é uma constante do PHP que retorna o diretório
     // do arquivo atual onde eles estiver.
   
     $titulo = "cadastro de matérias";
     require_once __DIR__ . "/../assets/utils/nav_padrao.php";
-    // mostro as matérias cadastreadas em ordem decrescente, 
-    // para que o usuário veja se a matéria que deseja cadastrar já existe.
+  
 
 ?>
     

@@ -6,123 +6,141 @@
 // ===========================================================================
 /* Mascara de telefone */
 
-function mascara(campo,formatacao){
-    v_obj=campo
-    v_fun=formatacao
-    setTimeout(execmascara, 1);
+function mascara(campo, formatacao) {
+  v_obj = campo
+  v_fun = formatacao
+  setTimeout(execmascara, 1);
 }
-function execmascara(){ 
-    v_obj.value=v_fun(v_obj.value)
+function execmascara() {
+  v_obj.value = v_fun(v_obj.value)
 }
-function mascTelefone(v){
-    v=v.replace(/\D/g,""); //Remove o que não é numero
-    v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses
-    v=v.replace(/(\d)(\d{4})$/,"$1-$2"); //Coloca hifen
-    return v;
+function mascTelefone(v) {
+  v = v.replace(/\D/g, ""); //Remove o que não é numero
+  v = v.replace(/^(\d{2})(\d)/g, "($1) $2"); //Coloca parênteses
+  v = v.replace(/(\d)(\d{4})$/, "$1-$2"); //Coloca hifen
+  return v;
 }
-function id( el ){
-	return document.getElementById( el );
+function id(el) {
+  return document.getElementById(el);
 }
-document.addEventListener('DOMContentLoaded', function() {
-    
-    const campoTelefone = document.getElementById("telefone");
-    if (campoTelefone) {
-        campoTelefone.onkeyup = function() {
-            if (typeof mascara === 'function' && typeof mascTelefone === 'function') {
-                mascara(this, mascTelefone);
-            }
-        };
-    }
+document.addEventListener('DOMContentLoaded', function () {
+
+  const campoTelefone = document.getElementById("telefone");
+  if (campoTelefone) {
+    campoTelefone.onkeyup = function () {
+      if (typeof mascara === 'function' && typeof mascTelefone === 'function') {
+        mascara(this, mascTelefone);
+      }
+    };
+  }
 
 
 
-/* Mascara de email */
+  /* Mascara de email */
 
-// Função que confere se o e-mail tem @ e .
-function validarEmail(email) {
-  const padrao = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-  return padrao.test(email);
-}
+  // Função que confere se o e-mail tem @ e .
+  function validarEmail(email) {
+    const padrao = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    return padrao.test(email);
+  }
 
-const formUsuario = document.getElementById("form");
-const inputEmail = document.getElementById("email");
+  const formUsuario = document.getElementById("form");
+  const inputEmail = document.getElementById("email");
 
-if (formUsuario && inputEmail) {
-  formUsuario.addEventListener("submit", function (evento) {
-    const valorDigitado = inputEmail.value.trim();
+  if (formUsuario && inputEmail) {
+    formUsuario.addEventListener("submit", function (evento) {
+      const valorDigitado = inputEmail.value.trim();
 
-    if (!validarEmail(valorDigitado)) {
-      alert("Por favor, insira um endereço de e-mail válido.");
-      inputEmail.focus();
-      evento.preventDefault(); // Impede o envio apenas se o e-mail for inválido
-      return;
-    }
+      if (!validarEmail(valorDigitado)) {
+        alert("Por favor, insira um endereço de e-mail válido.");
+        inputEmail.focus();
+        evento.preventDefault(); // Impede o envio apenas se o e-mail for inválido
+        return;
+      }
 
-    // A matrícula precisa ter 12 números
-    const campoMatricula = document.getElementById("matricula");
-    if (campoMatricula && campoMatricula.value.length !== 12) {
-      const erro = document.getElementById("erro-matricula");
-      if (erro) erro.style.display = "block";
-      campoMatricula.focus();
+      // Verifica se a senha tem mais de 5 caracteres e se estão iguais
+      const senha = document.getElementById("senha");
+      const confirmar = document.getElementById("confirmar");
+
+      if (senha.value.length <= 5) {
+        alert("A senha deve ter mais de 5 caracteres.");
+        senha.focus();
+        evento.preventDefault();
+        return;
+      }
+
+      if (senha.value !== confirmar.value) {
+        alert("As senhas não são iguais.");
+        confirmar.focus();
+        evento.preventDefault();
+        return;
+      }
+
+      // A matrícula precisa ter 12 números
+      const campoMatricula = document.getElementById("matricula");
+      if (campoMatricula && campoMatricula.value.length !== 12) {
+        const erro = document.getElementById("erro-matricula");
+        if (erro) erro.style.display = "block";
+        campoMatricula.focus();
+        evento.preventDefault();
+        return;
+      }
+
+      // não tem servidor para receber o POST (tirar o preventDefault e o reset quando criar o backend, estão aí apenas para tirar o erro 405)
       evento.preventDefault();
-      return;
-    }
-
-    // não tem servidor para receber o POST (tirar o preventDefault e o reset quando criar o backend, estão aí apenas para tirar o erro 405)
-    evento.preventDefault();
-    const aviso = document.getElementById("aviso");
-    if (aviso) {
-      aviso.textContent = "Cadastro enviado com sucesso!";
-    }
-    formUsuario.reset();
-  });
-}
+      const aviso = document.getElementById("aviso");
+      if (aviso) {
+        aviso.textContent = "Cadastro enviado com sucesso!";
+      }
+      formUsuario.reset();
+    });
+  }
 
 
-/*Mascara de matricula*/
+  /*Mascara de matricula*/
 
-    const inputMatricula = document.getElementById("matricula");
-    const mensagemErro = document.getElementById("erro-matricula");
+  const inputMatricula = document.getElementById("matricula");
+  const mensagemErro = document.getElementById("erro-matricula");
 
-    if (inputMatricula) {
-//Limpa letras enquanto o usuário digita e deixa apenas números
-      inputMatricula.addEventListener("input", function () {
-//encontra tudo o que não for número e substitui por nada
-          this.value = this.value.replace(/\D/g, "");
-      });
+  if (inputMatricula) {
+    //Limpa letras enquanto o usuário digita e deixa apenas números
+    inputMatricula.addEventListener("input", function () {
+      //encontra tudo o que não for número e substitui por nada
+      this.value = this.value.replace(/\D/g, "");
+    });
 
-//Verifica se tem 12 números
-      inputMatricula.addEventListener("blur", function () {
-          const totalCaracteres = this.value.length;
+    //Verifica se tem 12 números
+    inputMatricula.addEventListener("blur", function () {
+      const totalCaracteres = this.value.length;
 
-          //Mostra o erro caso não tenha
-          if (totalCaracteres > 0 && totalCaracteres !== 12) {
-              mensagemErro.style.display = "block";
-          } else {
-              mensagemErro.style.display = "none";
-          }
-      });
-    }
+      //Mostra o erro caso não tenha
+      if (totalCaracteres > 0 && totalCaracteres !== 12) {
+        mensagemErro.style.display = "block";
+      } else {
+        mensagemErro.style.display = "none";
+      }
+    });
+  }
 
 
 
-/* Máscara de nome próprio */
+  /* Máscara de nome próprio */
 
-    const inputNome = document.getElementById("nome");
+  const inputNome = document.getElementById("nome");
 
-    if (inputNome) {
-      inputNome.addEventListener('input', (e) => {
-        let valor = e.target.value;
+  if (inputNome) {
+    inputNome.addEventListener('input', (e) => {
+      let valor = e.target.value;
 
-//Remove números e caracteres especiais
-        valor = valor.replace(/[^a-zA-Z\u00C0-\u00FF\s]/g, "");
+      //Remove números e caracteres especiais
+      valor = valor.replace(/[^a-zA-Z\u00C0-\u00FF\s]/g, "");
 
-//Primeira letra maiuscula e o resto minuscula
-        valor = valor.toLowerCase().replace(/(?:^|\s)\S/g, (letra) => letra.toUpperCase());
+      //Primeira letra maiuscula e o resto minuscula
+      valor = valor.toLowerCase().replace(/(?:^|\s)\S/g, (letra) => letra.toUpperCase());
 
-        e.target.value = valor;
-      });
-    }
+      e.target.value = valor;
+    });
+  }
 });
 
 
@@ -145,23 +163,20 @@ function verificarResposta() {
 const requisitoSelect = document.getElementById("requisito");
 
 if (requisitoSelect) {
-    requisitoSelect.addEventListener("change", verificarResposta);
-    verificarResposta();
+  requisitoSelect.addEventListener("change", verificarResposta);
+  verificarResposta();
 }
 
 /* Mensagem de sucesso ao enviar o cadastro de disciplina */
-//(tirar o preventDefault e o reset quando criar o backend, estão aí apenas para tirar o erro 405)
 
 const formDisciplina = document.getElementById('form-disciplina');
 if (formDisciplina) {
   formDisciplina.addEventListener('submit', function (event) {
-    event.preventDefault();
 
     const aviso = document.getElementById('aviso');
     if (aviso) {
       aviso.textContent = 'Disciplina cadastrada com sucesso!';
     }
-    this.reset();
     verificarResposta();
   });
 }
@@ -179,12 +194,12 @@ function trocarTema() {
     botaoTema.textContent = "⏾";
     logotema.src = "/studytree/frontend/assets/img/logos/logo-clara.png";
     logopequena.src = "/studytree/frontend/assets/img/logos/pequena.png";
-    
+
   } else {
     botaoTema.textContent = "☼";
     logotema.src = "/studytree/frontend/assets/img/logos/logo-escura.png";
     logopequena.src = "/studytree/frontend/assets/img/logos/pequena2.png";
-  
+
   }
 }
 

@@ -1,13 +1,12 @@
 <?php
     // recebe o formulário de cad_materias.php, 
     // valida e insere no banco de dados.
-    // DIR é uma constante mágica do PHP que retorna o diretório
+    // DIR é uma constante do PHP que retorna o diretório
     // do arquivo atual onde eles estiver.
   
-    $titulo = "Cadastro de matérias";
+    $titulo = "cadastro de matérias";
     require_once __DIR__ . "/../assets/utils/nav_padrao.php";
-    // mostro as matérias cadastreadas em ordem decrescente, 
-    // para que o usuário veja se a matéria que deseja cadastrar já existe.
+  
 
 ?>
     
@@ -28,17 +27,17 @@
 
         <form action="/studytree/backend/materia/confere_materia.php" method="POST" id="form-materia">
           <fieldset>
-            <legend>Preencha os campos abaixo:</legend>
+            <legend>preencha os campos abaixo:</legend>
 
             <div>
-              <label for="nome">Nome da matéria</label>
+              <label for="nome">nome da matéria</label>
               <input type="text" id="nome" name="nome" required>
             </div>
     
 
             <div class="descricao">
 
-            <label for="desc">Descrição da matéria</label>
+            <label for="desc">descrição da matéria</label>
             <textarea id="desc" name="desc" rows="5" cols="40" required></textarea>
 
             </div>
@@ -46,8 +45,8 @@
           </fieldset>
 
           <div>
-            <button type="submit" id="cadastrar-materia">Cadastrar</button>
-            <button type="reset">Limpar</button>
+            <button type="submit" id="cadastrar-materia">cadastrar</button>
+            <button type="reset">limpar</button>
             <h4 id="aviso" class="aviso" aria-live="polite"></h4>
           </div>
         </form>

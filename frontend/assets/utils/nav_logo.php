@@ -40,6 +40,7 @@
             <li> <button><a href="/studytree/frontend/disciplina/cad_disciplina.php">Cadastrar disciplinas</a></button></li>
             <li> <button><a href="/studytree/frontend/materia/cad_materias.php">Cadastrar materias</a></button></li>
             <li> <button ><a href="/studytree/frontend/curso/cad_curso.php">Cadastrar cursos</a></button></li>
+            <li><button><a href="/studytree/frontend/conteudo/cad_conteudo.php">Cadastrar conteúdo</a></button></li>
 
             <div class="botao-tema">
                 <button type="button" id="botao-tema" id="botao-tema" class="botao-tema">⏾</button>

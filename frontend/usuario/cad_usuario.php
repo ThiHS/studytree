@@ -79,17 +79,17 @@
 
         </div>
 
-        <div>
+       <div>
 
-          <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" rows="5" cols="40" required></textarea>
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" name="senha" required>
 
         </div>
 
         <div>
 
-          <input type="checkbox" id="copia" name="copia" value="sim">
-          <label for="copia">Quero receber uma cópia desta mensagem</label>
+          <label for="confirmar">Confirme a senha</label>
+          <input type="password" id="confirmar" name="confirmar" required>
 
         </div>
 
@@ -99,6 +99,7 @@
         
         <button type="submit" id="enviar">Enviar</button>
         <button type="reset">Limpar</button>
+        <p><a href="view_usuarios.php">Ver todos os usuários cadastrados</a></p>
 
         <h4 id="aviso" class="aviso" aria-live="polite"></h4>
       </div>

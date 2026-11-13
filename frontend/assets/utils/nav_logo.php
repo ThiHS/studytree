@@ -12,6 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode" />
+
+        
        
     <link rel="stylesheet" href="/studytree/frontend/assets/css/estilo.css">
     <link rel="stylesheet" href="/studytree/frontend/assets/css/tema-escuro.css" id="tema-escuro" disabled>
@@ -42,10 +45,16 @@
             <li> <button ><a href="/studytree/frontend/curso/cad_curso.php">Cadastrar cursos</a></button></li>
             <li><button><a href="/studytree/frontend/conteudo/cad_conteudo.php">Cadastrar conteúdo</a></button></li>
 
+            <li> <button ><a href="/studytree/frontend/login.php">Login</a></button></li>
+
+
             <div class="botao-tema">
-                <button type="button" id="botao-tema" id="botao-tema" class="botao-tema">⏾</button>
+                <button type="button" id="botao-tema" id="botao-tema" class="botao-tema"><span class="material-symbols-outlined"> dark_mode </span></button>
             </div>
 
         </ul>
 
     </nav>
+
+        
+

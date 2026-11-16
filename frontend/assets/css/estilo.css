@@ -705,3 +705,6 @@
         margin-bottom: 1rem;
     }
 
+    .reset{
+        all: unset;
+    }

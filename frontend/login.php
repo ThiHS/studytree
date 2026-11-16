@@ -2,9 +2,7 @@
     $titulo = "Login";
     require_once __DIR__ . "/assets/utils/nav_padrao.php";
 ?>
-    <header>
-        <h1 class="my-auto">StudyTree</h1>
-    </header>
+
     
     <main class="cadastro-layout">
 
@@ -36,6 +34,6 @@
         </section>
     </main>
 
-    <a href="/studytree/frontend/usuario/list_permissoes.php"></a>
+    
 </body>
 </html>

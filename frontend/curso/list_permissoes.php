@@ -47,4 +47,60 @@
         $cargo["coordenador"]
         $cargo["secretaria"]
     ------------------------*/
+
+
+    $titulo = "Permissões";
+   require_once __DIR__ . "/../assets/utils/nav_padrao.php";
+
 ?>
+
+    <main>
+    
+
+         
+        <section>
+
+        <div class="fora">
+
+            <?php foreach($cargo as $nome_cargo => $permissoes_n){ ?>
+                <div class = "cargos">  
+                    <h3> <?= $nome_cargo ?> </h3>
+                    
+                    <button class= "botao_carg">Selecionar</button>
+                </div> 
+            <?php } ?>
+            
+
+        </div>
+
+        <div>
+            <?php
+
+            foreach ($permissoes as $nome_permissao => $conteudo) { ?>
+                <table> 
+                    <thead>
+                        <tr>
+                            <th> <?= $nome_permissao  ?> </th>
+                        </tr>
+                    </thead>
+                    
+                    <?php foreach ($conteudo as $funcao => $valor) {?>
+                         <div class = checkbox>
+                            <tbody>
+                                <tr>
+                                    <td> <input type='checkbox' name='permissao'>
+                                    <label for='permissao'> <?= $valor?> </label> </td>
+                                </tr>
+                            </tbody>
+                         </div>
+
+                    <?php } ?>
+
+                </table>
+                    
+            <?php } ?>
+
+        </div>
+        
+        </section>
+    </main>

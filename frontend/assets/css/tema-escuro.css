@@ -16,10 +16,13 @@
         --texto-card: #A9C1A5; /* textos do card, destaques */
         --form-border: #293d26; /* borda do formulário */
         --form-fundo: #c3dabf; /* fundo do formulário */
+        
+        --permissoes: #42523F; /* tabelas ao passar o mouse */
+        --cor_permissoes: #323e30;
 
         --table-listra: #42523F; /*listas das tabelas */
         --table-listra2: #576654; /* listas das tabelas 2 */
-        --table-houver: #527993; /* tabelas ao passar o mouse */
+        --table-houver: #42523F; /* tabelas ao passar o mouse */
 
         --apoio: #42523F; /* botões, destaques */
         --texto-apoio: #A2CA9B; /* botões, destaques */

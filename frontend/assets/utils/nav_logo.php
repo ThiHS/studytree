@@ -43,8 +43,11 @@
             <li> <button><a href="/studytree/frontend/disciplina/cad_disciplina.php">Cadastrar disciplinas</a></button></li>
             <li> <button><a href="/studytree/frontend/materia/cad_materias.php">Cadastrar materias</a></button></li>
             <li> <button ><a href="/studytree/frontend/curso/cad_curso.php">Cadastrar cursos</a></button></li>
+            <li><button><a href="/studytree/frontend/conteudo/cad_conteudo.php">Cadastrar conteúdo</a></button></li>
+
             <li> <button ><a href="/studytree/frontend/login.php">Login</a></button></li>
             <li> <button ><a href="/studytree/frontend/curso/list_permissoes.php">Permissões</a></button></li>
+
 
 
             <div class="botao-tema">

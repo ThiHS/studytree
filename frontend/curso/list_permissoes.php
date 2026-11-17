@@ -3,6 +3,8 @@
 
     $sql = "SELECT * FROM permissoes;";
     $permissoes_bd = bd_select($sql);
+    $usuarios = bd_select("SELECT nome, num_matricula FROM usuario ORDER BY nome ASC"); 
+
 
     /* ----------------------
         organiza permissões
@@ -58,6 +60,28 @@
     
         <form action="/studytree/backend/usuario/confere_permissao.php" class="reset" method="POST">
 
+            <div>
+                 
+
+                
+                    <label for="usuarios">Escolha um usuario:</label>
+                    <select name="usuarios" id="">
+                    
+                        <?php foreach($usuarios as $id_array => $array_nomes){ ?>
+
+                                <option value= " <?= $array_nomes['num_matricula'] ?> " > <?= $array_nomes['nome'] ?> </option>
+                                
+                        <?php } ?>
+                
+                    </select>   
+
+                    
+                
+                
+
+
+            </div>
+
             
             <section>
 
@@ -108,3 +132,4 @@
             <button type="submit" class= "botao_carg" > Salvar</button>
         </form>
     </main>
+<?php require_once __DIR__ . "/../assets/utils/footer_padrao.php"; ?>

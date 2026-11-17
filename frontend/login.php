@@ -6,6 +6,7 @@
     
     <main class="cadastro-layout">
 
+        
         <section id="cadastro-disciplina">
 
             <form action="/studytree/backend/usuario/confere_login.php" method="POST">
@@ -34,6 +35,4 @@
         </section>
     </main>
 
-    
-</body>
-</html>
+<?php require_once __DIR__ . "/assets/utils/footer_padrao.php"; ?>

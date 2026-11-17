@@ -17,7 +17,7 @@ require_once __DIR__ . "/../assets/utils/nav_logo.php";
         <table>
         <thead>
         <tr>
-        <th>Nº</th>
+        
         <th>Nome</th>
         <th>E-mail</th>
         <th>Telefone</th>
@@ -29,11 +29,11 @@ require_once __DIR__ . "/../assets/utils/nav_logo.php";
 
         <?php foreach ($usuarios as $u): ?>
         <tr>
-        <td><?php echo $u["id"]; ?></td>
+        
         <td><?php echo htmlspecialchars($u["nome"]); ?></td>
         <td><?php echo htmlspecialchars($u["email"]); ?></td>
         <td><?php echo htmlspecialchars($u["telefone"]); ?></td>
-        <td><?php echo htmlspecialchars($u["matricula"]); ?></td>
+        <td><?php echo htmlspecialchars($u["num_matricula"]); ?></td>
         <td><?php echo htmlspecialchars($u["curso"]); ?></td>
         </tr>
         <?php endforeach; ?>

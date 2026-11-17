@@ -423,6 +423,13 @@
         margin-inline: auto;
     }
 
+    .subtitulo-cad-disciplina{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
     .cadastro-usuario {
         flex: 1 1 24rem;
         min-width: 0;
@@ -431,6 +438,13 @@
         align-items: flex-start;
         margin: 0;
         background-color: var(--fundo);
+    }
+
+    .form-conteudo{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 4rem;
+        margin-right: 10rem;
     }
     
     .cadastro-usuario p{

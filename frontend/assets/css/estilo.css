@@ -17,6 +17,9 @@
         --form-border: #4c7996; /* borda do formulário */
         --form-fundo: #e4f0f2; /* fundo do formulário */
 
+        --permissoes: #527993; /* tabelas ao passar o mouse */
+        --cor_permissoes: #527993;
+
         --table-listra: #B6CBD9; /*listas das tabelas */
         --table-listra2: #D5E1E9; /* listas das tabelas 2 */
         --table-houver: #527993; /* tabelas ao passar o mouse */
@@ -26,6 +29,7 @@
 
         --fundo: #f6fdeb; /* o fundo da página */
         --texto: #213303; /* a cor das letras */
+
 
     /* fontes */
 
@@ -419,6 +423,13 @@
         margin-inline: auto;
     }
 
+    .subtitulo-cad-disciplina{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
     .cadastro-usuario {
         flex: 1 1 24rem;
         min-width: 0;
@@ -427,6 +438,13 @@
         align-items: flex-start;
         margin: 0;
         background-color: var(--fundo);
+    }
+
+    .form-conteudo{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 4rem;
+        margin-right: 10rem;
     }
     
     .cadastro-usuario p{
@@ -654,7 +672,58 @@
         display: none;
     }
 
-/* Árvore curricular */
+    .checkbox label{
+        display: flex;
+        background-color: var(--nav_fundo);
+        cursor: pointer;
+    }
+
+    .checkbox {
+        display: flex;
+        background-color: var(--nav_fundo);
+        cursor: pointer;
+    }
+
+    .cargos{
+        display:flex;
+        flex-direction: column;
+        color: var(--cor_permissoes);
+        font-family: var(--fonte_principal);
+        width: 100%;
+        align-items: center;
+        justify-content: center; 
+        background-color: var(--table-listra2);
+        border-radius: 2.1rem;
+        border-width: 2px;
+        padding-top: 1rem;
+ 
+    }
+
+    .fora{
+        display: flex;
+        justify-content: center;
+        gap: 10rem;
+    }
+
+    .botao_carg{
+        color: var(--card);
+        background-color: var(--permissoes);
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 10px 20px;
+        margin-top: 3%;
+        border: none;
+        border-radius: 12000rem;
+        cursor: pointer;
+        margin-bottom: 1rem;
+    }
+
+    .reset{
+        all: unset;
+    }
+
+    /* Árvore curricular */
 
     .arvore-pagina {
         padding: var(--espaco);
@@ -809,4 +878,3 @@
 
     .arvore-meta {
         font-size: 0.875rem;
-    }

@@ -4,21 +4,23 @@
     require_once __DIR__ . "/../assets/utils/nav_padrao.php";
 ?>
     
-    <main class="cadastro-layout">
+    <main>
 
     <article>
 
-        <section class="titulo-cad-conteúdo">
-            <h2>Cadastre um conteúdo</h2>
-        </section>
-        <section class="subtitulo-cad-conteúdo">
-            <h3>Preencha com atenção os dados do conteúdo que deseja cadastrar.</h3>
-        </section>
-
+        <div class="subtitulo-cad-disciplina" >
+          <section>
+              <h2>Cadastre um conteúdo</h2>
+          </section>
+          <section>
+              <h3>Preencha com atenção os dados do conteúdo que deseja cadastrar.</h3>
+          </section>
+        </div>
+        
     </article>
 
-    <section id="cadastro-conteúdo">
-        <form action="">
+    <section id="cadastro-conteúdo" class="form-conteudo">
+        <form action="" class="form-conteudo">
           <fieldset>
             <legend>Preencha os campos abaixo:</legend>
 
@@ -27,7 +29,6 @@
               <input type="text" id="nome" name="nome" required>
             </div>
     
-
             <div class="descricao">
 
             <label for="desc">Descrição do conteúdo</label>
@@ -42,16 +43,13 @@
             <button type="reset">Limpar</button>
             <h4 id="aviso" class="aviso" aria-live="polite"></h4>
           </div>
+
         </form>
-      </section>
+    </section>
         </form>
-        
 
-
-
-       
       </section>
     
     </main>
-</body>
-</html>
+
+<?php require_once __DIR__ . "/../assets/utils/footer_padrao.php"; ?>

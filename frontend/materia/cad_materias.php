@@ -10,7 +10,7 @@
 
 ?>
     
-  <main class="cadastro-layout">
+  <main>
 
     <article>
 
@@ -52,7 +52,7 @@
         </form>
 
       </section>
-    </main>
-</body>
+
+<?php require_once __DIR__ . "/../assets/utils/footer_padrao.php"; ?>
 
 

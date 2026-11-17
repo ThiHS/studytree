@@ -47,10 +47,12 @@
             <li><button><a href="/studytree/frontend/curso/view_tree.php">Árvore de estudos</a></button></li>
 
             <li> <button ><a href="/studytree/frontend/login.php">Login</a></button></li>
+            <li> <button ><a href="/studytree/frontend/curso/list_permissoes.php">Permissões</a></button></li>
+
 
 
             <div class="botao-tema">
-                <button type="button" id="botao-tema" id="botao-tema" class="botao-tema"><span class="material-symbols-outlined"> dark_mode </span></button>
+                <button type="button" id="botao-tema" id="botao-tema" class="botao-tema">⏾</button>
             </div>
 
         </ul>

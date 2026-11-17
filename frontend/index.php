@@ -56,28 +56,37 @@
             </tbody>
         </table>
     </section>   
-    <!--
-         6.   Formulário — Guilherme Rocha
-    -->
-        <section>
-        <form id="formulario1">
 
 
-            <legend><span>Formulário</span></legend>
-            <label for="lname"><span>Nome</span></label>
-            <input type="text" id="lname" name="lname">
-            <label for="lname"> <span>Sobrenome</span></label>
-            <input type="text" id="lname" name="lname">
-            <label for="email"><span>Email</span></label>
-            <input type="email" id="email" name="email">
-            <label for="birthday"><span>Data de Nascimento</span></label>
-            <input type="date" id="birthday" name="birthday">
-            <input type="submit" value="Enviar">
-            
+       <section id="cadastro-disciplina">
 
+        <form action="/studytree/backend/materia/confere_materia.php" method="POST" id="form-materia">
+          <fieldset>
+            <legend>preencha os campos abaixo:</legend>
 
+            <div>
+              <label for="nome">exemplo</label>
+              <input type="text" id="nome" name="nome" required>
+            </div>
+    
+
+            <div class="descricao">
+
+            <label for="desc">descrição do exemplo</label>
+            <textarea id="desc" name="desc" rows="5" cols="40" required></textarea>
+
+            </div>
+
+          </fieldset>
+
+          <div>
+            <button type="submit" id="cadastrar-materia">cadastrar</button>
+            <button type="reset">limpar</button>
+            <h4 id="aviso" class="aviso" aria-live="polite"></h4>
+          </div>
         </form>
-        </section>
+
+      </section>
 
 <?php
     require_once __DIR__ . "/assets/utils/footer_padrao.php";

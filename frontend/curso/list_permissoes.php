@@ -3,6 +3,8 @@
 
     $sql = "SELECT * FROM permissoes;";
     $permissoes_bd = bd_select($sql);
+    $usuarios = bd_select("SELECT nome, num_matricula FROM usuario ORDER BY nome ASC"); 
+
 
     /* ----------------------
         organiza permissões
@@ -47,4 +49,87 @@
         $cargo["coordenador"]
         $cargo["secretaria"]
     ------------------------*/
+
+
+    $titulo = "Permissões";
+   require_once __DIR__ . "/../assets/utils/nav_padrao.php";
+
 ?>
+
+    <main>
+    
+        <form action="/studytree/backend/usuario/confere_permissao.php" class="reset" method="POST">
+
+            <div>
+                 
+
+                
+                    <label for="usuarios">Escolha um usuario:</label>
+                    <select name="usuarios" id="">
+                    
+                        <?php foreach($usuarios as $id_array => $array_nomes){ ?>
+
+                                <option value= " <?= $array_nomes['num_matricula'] ?> " > <?= $array_nomes['nome'] ?> </option>
+                                
+                        <?php } ?>
+                
+                    </select>   
+
+                    
+                
+                
+
+
+            </div>
+
+            
+            <section>
+
+                <div class="fora">
+
+                    <?php foreach($cargo as $nome_cargo => $permissoes_n){ ?>
+                        <div class = "cargos">  
+                            <h3> <?= $nome_cargo ?> </h3>
+                            
+                            <button class= "botao_carg">Selecionar</button>
+                        </div> 
+                    <?php } ?>
+                    
+
+                </div>
+
+                <div>
+                    <?php
+
+                    foreach ($permissoes as $nome_permissao => $conteudo) { ?>
+                        <table> 
+                            <thead>
+                                <tr>
+                                    <th> <?= $nome_permissao  ?> </th>
+                                </tr>
+                            </thead>
+                            
+                            <?php foreach ($conteudo as $funcao => $valor) {?>
+                                <div class = checkbox>
+                                    <tbody>
+                                        <tr>
+                                            <td> <input type='checkbox' name=' permissao_<?= $funcao ?>' value=' <?= true ?>'>
+                                            <label for='permissao'> <?= $valor?> </label> </td>
+                                        </tr>
+                                    </tbody>
+                                </div>
+
+                            <?php } ?>
+
+                        </table>
+                            
+                    <?php } ?>
+
+                </div>
+            
+            </section>
+
+            <button type="submit" class= "botao_carg" > Salvar</button>
+        </form>
+    </main>
+<?php require_once __DIR__ . "/../assets/utils/footer_padrao.php"; ?>

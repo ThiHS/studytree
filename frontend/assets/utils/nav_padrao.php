@@ -46,6 +46,7 @@
             <li><button><a href="/studytree/frontend/curso/view_tree.php">Árvore de estudos</a></button></li>
 
             <li> <button ><a href="/studytree/frontend/login.php">Login</a></button></li>
+            <li> <button ><a href="/studytree/frontend/curso/list_permissoes.php">Permissões</a></button></li>
 
 
             <div class="botao-tema">

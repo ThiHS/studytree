@@ -43,6 +43,7 @@
             <li> <button><a href="/studytree/frontend/materia/cad_materias.php">Cadastrar materias</a></button></li>
             <li> <button ><a href="/studytree/frontend/curso/cad_curso.php">Cadastrar cursos</a></button></li>
             <li><button><a href="/studytree/frontend/conteudo/cad_conteudo.php">Cadastrar conteúdo</a></button></li>
+            <li><button><a href="/studytree/frontend/curso/view_tree.php">Árvore de estudos</a></button></li>
 
             <li> <button ><a href="/studytree/frontend/login.php">Login</a></button></li>
 

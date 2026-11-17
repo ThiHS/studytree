@@ -653,3 +653,160 @@
     #checklist-materia {
         display: none;
     }
+
+/* Árvore curricular */
+
+    .arvore-pagina {
+        padding: var(--espaco);
+        max-width: 90rem;
+        margin-inline: auto;
+    }
+
+    .arvore-intro,
+    .arvore-resumo {
+        max-width: 46rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .arvore-intro p,
+    .arvore-resumo p,
+    .arvore-camada-texto,
+    .arvore-no p {
+        color: inherit;
+        line-height: 1.45;
+    }
+
+    .arvore-intro p,
+    .arvore-resumo p {
+        margin-top: 0.5rem;
+    }
+
+    form.arvore-seletor {
+        max-width: 32rem;
+        margin-bottom: 2rem;
+    }
+
+    .arvore-legenda {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75rem 1.25rem;
+        margin-bottom: 1.25rem;
+        color: var(--texto);
+    }
+
+    .arvore-selo {
+        display: inline-block;
+        background-color: var(--apoio);
+        color: var(--texto-apoio);
+        font-size: 0.8rem;
+        font-weight: 600;
+        line-height: 1.3;
+        padding: 0.2rem 0.55rem;
+        border-radius: 999px;
+        margin-bottom: 0.45rem;
+    }
+
+    .arvore-mapa {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding-bottom: 0.35rem;
+        cursor: grab;
+        scrollbar-width: auto;
+        scrollbar-color: var(--apoio) var(--fundo-cabecalho);
+    }
+
+    .arvore-mapa::-webkit-scrollbar {
+        height: 14px;
+    }
+
+    .arvore-mapa::-webkit-scrollbar-track {
+        background: var(--fundo-cabecalho);
+        border-radius: 999px;
+    }
+
+    .arvore-mapa::-webkit-scrollbar-thumb {
+        background: var(--apoio);
+        border: 3px solid var(--fundo-cabecalho);
+        border-radius: 999px;
+    }
+
+    .arvore-mapa.arvore-arrastando {
+        cursor: grabbing;
+        user-select: none;
+    }
+
+    .arvore-camadas {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        gap: 10rem;
+        width: max-content;
+        min-width: 100%;
+    }
+
+    .arvore-linhas {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        pointer-events: none;
+    }
+
+    .arvore-linha {
+        fill: none;
+        stroke-width: 2.5;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+    }
+
+    .arvore-camada {
+        position: relative;
+        z-index: 1;
+        flex: 0 0 17rem;
+        width: 17rem;
+        max-width: 17rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        background-color: transparent;
+    }
+
+    .arvore-camada h3 {
+        background-color: var(--fundo-cabecalho);
+        color: var(--texto-cabecalho);
+        padding: 0.45rem 0.75rem;
+        border-radius: 0.4rem;
+    }
+
+    .arvore-camada-texto {
+        font-size: 0.9rem;
+    }
+
+    .arvore-camada-ciclo .arvore-no {
+        border-style: dashed;
+    }
+
+    .arvore-no {
+        background-color: var(--card);
+        color: var(--texto-card);
+        border: 3px solid var(--form-border);
+        border-radius: 0.5rem;
+        padding: 0.85rem 0.95rem;
+    }
+
+    .arvore-no h4 {
+        font-size: 1.05rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .arvore-no p + p {
+        margin-top: 0.35rem;
+    }
+
+    .arvore-meta {
+        font-size: 0.875rem;
+    }

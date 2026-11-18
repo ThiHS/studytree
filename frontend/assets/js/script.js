@@ -23,7 +23,7 @@ function mascTelefone(v) {
 function id(el) {
   return document.getElementById(el);
 }
-document.addEventListener('DOMContentLoaded', function () {
+function iniciarPagina() {
 
   const campoTelefone = document.getElementById("telefone");
   if (campoTelefone) {
@@ -51,10 +51,15 @@ document.addEventListener('DOMContentLoaded', function () {
     formUsuario.addEventListener("submit", function (evento) {
       const valorDigitado = inputEmail.value.trim();
 
+      const aviso = document.getElementById("aviso");
+      function mostrarAviso(texto, campo) {
+        if (aviso) aviso.textContent = texto;
+        if (campo) campo.focus();
+        evento.preventDefault();
+      }
+
       if (!validarEmail(valorDigitado)) {
-        alert("Por favor, insira um endereço de e-mail válido.");
-        inputEmail.focus();
-        evento.preventDefault(); // Impede o envio apenas se o e-mail for inválido
+        mostrarAviso("Insira um e-mail válido.", inputEmail);
         return;
       }
 
@@ -63,36 +68,36 @@ document.addEventListener('DOMContentLoaded', function () {
       const confirmar = document.getElementById("confirmar");
 
       if (senha.value.length <= 5) {
-        alert("A senha deve ter mais de 5 caracteres.");
-        senha.focus();
-        evento.preventDefault();
+        mostrarAviso("A senha deve ter mais de 5 caracteres.", senha);
         return;
       }
 
       if (senha.value !== confirmar.value) {
-        alert("As senhas não são iguais.");
-        confirmar.focus();
-        evento.preventDefault();
+        mostrarAviso("As senhas não são iguais.", confirmar);
         return;
+      }
+
+      const telefone = document.getElementById("telefone");
+      if (telefone) {
+        const digitos = telefone.value.replace(/\D/g, "");
+        if (digitos.length === 11) {
+          telefone.value = "(" + digitos.slice(0, 2) + ") " + digitos.slice(2, 7) + "-" + digitos.slice(7);
+        } else if (digitos.length === 10) {
+          telefone.value = "(" + digitos.slice(0, 2) + ") " + digitos.slice(2, 6) + "-" + digitos.slice(6);
+        } else {
+          mostrarAviso("Informe o telefone com DDD.", telefone);
+          return;
+        }
       }
 
       // A matrícula precisa ter 12 números
       const campoMatricula = document.getElementById("matricula");
-      if (campoMatricula && campoMatricula.value.length !== 12) {
+      if (campoMatricula && campoMatricula.value.replace(/\D/g, "").length !== 12) {
         const erro = document.getElementById("erro-matricula");
         if (erro) erro.style.display = "block";
-        campoMatricula.focus();
-        evento.preventDefault();
+        mostrarAviso("A matrícula deve ter exatamente 12 números.", campoMatricula);
         return;
       }
-
-      // não tem servidor para receber o POST (tirar o preventDefault e o reset quando criar o backend, estão aí apenas para tirar o erro 405)
-      evento.preventDefault();
-      const aviso = document.getElementById("aviso");
-      if (aviso) {
-        aviso.textContent = "Cadastro enviado com sucesso!";
-      }
-      formUsuario.reset();
     });
   }
 
@@ -141,7 +146,13 @@ document.addEventListener('DOMContentLoaded', function () {
       e.target.value = valor;
     });
   }
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", iniciarPagina);
+} else {
+  iniciarPagina();
+}
 
 
 

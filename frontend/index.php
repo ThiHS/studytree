@@ -2,7 +2,27 @@
 <?php
     require_once __DIR__ . "/assets/utils/nav_logo.php";
 ?>
+    <?php
+        session_start();
+        //var_dump($_SESSION);
+    ?>
 
+    <?php  if(isset($_SESSION['usuario']['nome'])) { ?>
+
+    <section class="teste1">
+        <div>   <h1>Bem-vindo          <?=  $_SESSION['usuario']['nome'] ?> </h1></div>
+        <div>   <h2>Seus dados:</h2></div>
+    </section>
+
+    <section class="teste" > 
+            <li>
+                <ul><div>   <h2>Telefone: </h2>         <?=  $_SESSION['usuario']['telefone'] ?> </ul></div>
+                <ul><div>   <h2>Email:</h2>             <?=  $_SESSION['usuario']['email'] ?> </ul></div>
+                <ul><div>   <h2>Num_matricula: </h2>    <?=  $_SESSION['usuario']['num_matricula'] ?> </ul></div>
+            </li>
+        </section>
+    <?php } ?>
+<?php /*
     <main>
         <h2>testeh2</h2>
         <h3>testeh3</h3>
@@ -87,7 +107,7 @@
         </form>
 
       </section>
-
+*/?>
 <?php
     require_once __DIR__ . "/assets/utils/footer_padrao.php";
 ?>

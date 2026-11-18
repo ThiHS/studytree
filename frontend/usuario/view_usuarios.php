@@ -4,7 +4,12 @@ require_once __DIR__ . "/../../backend/utils/tratareq.php";
 
 $titulo = "Cadastro de usuários";
 
-$usuarios = bd_select("SELECT * FROM usuario ORDER BY num_matricula DESC");
+$usuarios = bd_select(
+    "SELECT u.nome, u.email, u.telefone, u.num_matricula, c.nome AS curso
+     FROM usuario u
+     LEFT JOIN cursos_usuario cu ON cu.num_matricula = u.num_matricula
+     LEFT JOIN cursos c ON c.id_curso = cu.id_curso"
+);
 $total = count($usuarios);
 
 require_once __DIR__ . "/../assets/utils/nav_logo.php";
@@ -34,7 +39,7 @@ require_once __DIR__ . "/../assets/utils/nav_logo.php";
         <td><?php echo htmlspecialchars($u["email"]); ?></td>
         <td><?php echo htmlspecialchars($u["telefone"]); ?></td>
         <td><?php echo htmlspecialchars($u["num_matricula"]); ?></td>
-        <td><?php echo htmlspecialchars($u["curso"]); ?></td>
+        <td><?php echo htmlspecialchars($u["curso"] ?? ""); ?></td>
         </tr>
         <?php endforeach; ?>
 

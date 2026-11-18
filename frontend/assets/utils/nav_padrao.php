@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/studytree/frontend/assets/css/estilo.css">
     <link rel="stylesheet" href="/studytree/frontend/assets/css/tema-escuro.css" id="tema-escuro" disabled>
 
-    <script src="/studytree/frontend/assets/js/script.js" defer></script>
+    <script src="/studytree/frontend/assets/js/script.js?v=3" defer></script>
     </head>
 
 <body>

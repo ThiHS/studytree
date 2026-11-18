@@ -1,5 +1,7 @@
 <?php
     $titulo = "Cadastro de usuários";
+    require_once __DIR__ . "/../../backend/utils/conec.php";
+    $cursos = bd_select("SELECT id_curso, nome FROM cursos ORDER BY nome");
     require_once __DIR__ . "/../assets/utils/nav_padrao.php";
 ?>
 
@@ -62,7 +64,7 @@
         <div>
 
           <label for="matricula">Número de matrícula</label>
-          <input type="tel" id="matricula" maxlength="12" placeholder="000000000000" required>
+          <input type="tel" id="matricula" name="num_matricula" maxlength="12" placeholder="000000000000" required>
 
           <span id="erro-matricula"><br>A matrícula deve ter exatamente 12 números.</span>
         </div>
@@ -71,10 +73,13 @@
 
           <label for="curso">Curso</label>
 
-          <select id="curso" name="curso">
-            <option value="Ciência da Computação">Ciência da Computação</option>
-            <option value="Engenharia de Software">Engenharia de Software</option>
-            <option value="Sistemas de Informação">Sistemas de Informação</option>
+          <select id="curso" name="curso" required>
+            <option value="">Selecione um curso</option>
+            <?php foreach ($cursos as $curso): ?>
+              <option value="<?php echo (int) $curso["id_curso"]; ?>">
+                <?php echo htmlspecialchars($curso["nome"]); ?>
+              </option>
+            <?php endforeach; ?>
           </select>
 
         </div>
@@ -97,11 +102,19 @@
 
       <div>
         
-        <button type="submit" id="enviar">Enviar</button>
+        <button type="submit" id="enviar">Cadastrar</button>
         <button type="reset">Limpar</button>
         <p><a href="view_usuarios.php">Ver todos os usuários cadastrados</a></p>
 
-        <h4 id="aviso" class="aviso" aria-live="polite"></h4>
+        <h4 id="aviso" class="aviso" aria-live="polite"><?php
+          if (isset($_GET["ok"])) {
+              echo "Cadastro realizado.";
+          } elseif (isset($_GET["erro"]) && $_GET["erro"] === "2") {
+              echo "Este e-mail ou esta matrícula já está cadastrado.";
+          } elseif (isset($_GET["erro"])) {
+              echo "Não foi possível cadastrar. Confira o telefone com DDD, a matrícula de 12 números e a senha.";
+          }
+        ?></h4>
       </div>
 
     </form>

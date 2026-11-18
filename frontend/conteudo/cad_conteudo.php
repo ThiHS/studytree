@@ -20,7 +20,7 @@
     </article>
 
     <section id="cadastro-conteúdo" class="form-conteudo">
-        <form action="" class="form-conteudo">
+        <form action="/studytree/backend/conteudo/confere_conteudo.php" class="form-conteudo">
           <fieldset>
             <legend>Preencha os campos abaixo:</legend>
 

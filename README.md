@@ -178,6 +178,10 @@ Permissões           Cadastro Front-end      Emanuella
 Permissões           Cadastro Back-end       Thiago
 Permissões           Lista Front-end         Emanuella
 Permissões           Lista Back-end          Thiago
+Front                Footer                  Emanuella
+Front                Nav                     Emanuella
+Front                Padronização            Emanuella
+Front                Ajustes nas páginas     Emanuella
 
 
 ## Observações

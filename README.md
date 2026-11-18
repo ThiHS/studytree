@@ -156,120 +156,39 @@ Esse é o commit que registra a sua participação.
 
 ## Divisão de Tarefas
 
-| tema                               | função                       | integrante          |
-|------------------------------------|------------------------------|---------------------|
-| Banco de dados                     | Criação tbs                  | Arthur/Guilherme    |
-| Banco de dados                     | Criação permissões           | Thiago              |
-|                                    |                              |                     |
-| Usuários                           | Cadastro Front-end           | XXXXXXXXXXX         |
-| Usuários                           | Cadastro Back-end            | XXXXXXXXXXX         |
-| Usuários                           | Edição Front-end             | XXXXXXXXXXX         |
-| Usuários                           | Edição Back-end              | XXXXXXXXXXX         |
-| Usuários                           | Lista Front-end              | XXXXXXXXXXX         |
-| Usuários                           | Lista Back-end               | XXXXXXXXXXX         |
-|                                    |                              |                     |
-| Curso                              | Cadastro Front-end           | Angeline            |
-| Curso                              | Cadastro Back-end            | XXXXXXXXXXX         |
-| Curso                              | Edição Front-end             | XXXXXXXXXXX         |
-| Curso                              | Edição Back-end              | XXXXXXXXXXX         |
-| Curso                              | Lista Front-end              | XXXXXXXXXXX         |
-| Curso                              | Lista Back-end               | XXXXXXXXXXX         |
-|                                    |                              |                     |
-| Disciplina                         | Cadastro Front-end           | XXXXXXXXXXX         |
-| Disciplina                         | Cadastro Back-end            | XXXXXXXXXXX         |
-| Disciplina                         | Edição Front-end             | XXXXXXXXXXX         |
-| Disciplina                         | Edição Back-end              | XXXXXXXXXXX         |
-| Disciplina                         | Lista Front-end              | XXXXXXXXXXX         |
-| Disciplina                         | Lista Back-end               | XXXXXXXXXXX         |
-|                                    |                              |                     |
-| Matéria                            | Cadastro Front-end           | XXXXXXXXXXX         |
-| Matéria                            | Cadastro Back-end            | XXXXXXXXXXX         |
-| Matéria                            | Edição Front-end             | XXXXXXXXXXX         |
-| Matéria                            | Edição Back-end              | XXXXXXXXXXX         |
-| Matéria                            | Lista Front-end              | XXXXXXXXXXX         |
-| Matéria                            | Lista Back-end               | XXXXXXXXXXX         |
-|                                    |                              |                     |
-| Conteúdo                           | Cadastro Front-end           | XXXXXXXXXXX         |
-| Conteúdo                           | Cadastro Back-end            | XXXXXXXXXXX         |
-| Conteúdo                           | Edição Front-end             | XXXXXXXXXXX         |
-| Conteúdo                           | Edição Back-end              | XXXXXXXXXXX         |
-| Conteúdo                           | Lista Front-end              | XXXXXXXXXXX         |
-| Conteúdo                           | Lista Back-end               | XXXXXXXXXXX         |
-|                                    |                              |                     |
-| Materiais de apoio                 | Cadastro Front-end           | XXXXXXXXXXX         |
-| Materiais de apoio                 | Cadastro Back-end            | XXXXXXXXXXX         |
-| Materiais de apoio                 | Edição Front-end             | XXXXXXXXXXX         |
-| Materiais de apoio                 | Edição Back-end              | XXXXXXXXXXX         |
-| Materiais de apoio                 | Lista Front-end              | XXXXXXXXXXX         |
-| Materiais de apoio                 | Lista Back-end               | XXXXXXXXXXX         |
-|                                    |                              |                     |
-| Tipos de materiais                 | Cadastro Front-end           | XXXXXXXXXXX         |
-| Tipos de materiais                 | Cadastro Back-end            | XXXXXXXXXXX         |
-| Tipos de materiais                 | Edição Front-end             | XXXXXXXXXXX         |
-| Tipos de materiais                 | Edição Back-end              | XXXXXXXXXXX         |
-| Tipos de materiais                 | Lista Front-end              | XXXXXXXXXXX         |
-| Tipos de materiais                 | Lista Back-end               | XXXXXXXXXXX         |
-|                                    |                              |                     |
-| Permissões                         | Cadastro Front-end           | Thiago              |
-| Permissões                         | Cadastro Back-end            | Thiago              |
-| Permissões                         | Edição Front-end             | Thiago              |
-| Permissões                         | Edição Back-end              | Thiago              |
-| Permissões                         | Lista Front-end              | Thiago              |
-| Permissões                         | Lista Back-end               | Thiago              |
-|                                    |                              |                     |
-| Cursos dos usuários                | Vinculação Front-end         | XXXXXXXXXXX         |
-| Cursos dos usuários                | Vinculação Back-end          | XXXXXXXXXXX         |
-| Cursos dos usuários                | Remoção Front-end            | XXXXXXXXXXX         |
-| Cursos dos usuários                | Remoção Back-end             | XXXXXXXXXXX         |
-|                                    |                              |                     |
-| Disciplinas dos usuários           | Vinculação Front-end         | XXXXXXXXXXX         |
-| Disciplinas dos usuários           | Vinculação Back-end          | XXXXXXXXXXX         |
-| Disciplinas dos usuários           | Remoção Front-end            | XXXXXXXXXXX         |
-| Disciplinas dos usuários           | Remoção Back-end             | XXXXXXXXXXX         |
-|                                    |                              |                     |
-| Matérias dos usuários              | Vinculação Front-end         | XXXXXXXXXXX         |
-| Matérias dos usuários              | Vinculação Back-end          | XXXXXXXXXXX         |
-| Matérias dos usuários              | Remoção Front-end            | XXXXXXXXXXX         |
-| Matérias dos usuários              | Remoção Back-end             | XXXXXXXXXXX         |
-|                                    |                              |                     |
-| Conteúdos dos usuários             | Vinculação Front-end         | XXXXXXXXXXX         |
-| Conteúdos dos usuários             | Vinculação Back-end          | XXXXXXXXXXX         |
-| Conteúdos dos usuários             | Remoção Front-end            | XXXXXXXXXXX         |
-| Conteúdos dos usuários             | Remoção Back-end             | XXXXXXXXXXX         |
-|                                    |                              |                     |
-| Pré-requisitos                     | Cadastro Front-end           | XXXXXXXXXXX         |
-| Pré-requisitos                     | Cadastro Back-end            | XXXXXXXXXXX         |
-| Pré-requisitos                     | Edição Front-end             | XXXXXXXXXXX         |
-| Pré-requisitos                     | Edição Back-end              | XXXXXXXXXXX         |
-| Pré-requisitos                     | Lista Front-end              | XXXXXXXXXXX         |
-| Pré-requisitos                     | Lista Back-end               | XXXXXXXXXXX         |
-|                                    |                              |                     |
-| Materiais dos conteúdos            | Vinculação Front-end         | XXXXXXXXXXX         |
-| Materiais dos conteúdos            | Vinculação Back-end          | XXXXXXXXXXX         |
-| Materiais dos conteúdos            | Remoção Front-end            | XXXXXXXXXXX         |
-| Materiais dos conteúdos            | Remoção Back-end             | XXXXXXXXXXX         |
-| Materiais dos conteúdos            | Lista Front-end              | XXXXXXXXXXX         |
-| Materiais dos conteúdos            | Lista Back-end               | XXXXXXXXXXX         |
-|                                    |                              |                     |
-| Sistema                            | Login Front-end              | XXXXXXXXXXX         |
-| Sistema                            | Login Back-end               | XXXXXXXXXXX         |
-| Sistema                            | Logout Front-end             | XXXXXXXXXXX         |
-| Sistema                            | Logout Back-end              | XXXXXXXXXXX         |
-| Sistema                            | Controle de sessão           | XXXXXXXXXXX         |
-|                                    |                              |                     |
-| Progresso do aluno                 | Cadastro Front-end           | XXXXXXXXXXX         |
-| Progresso do aluno                 | Cadastro Back-end            | XXXXXXXXXXX         |
-| Progresso do aluno                 | Edição Front-end             | XXXXXXXXXXX         |
-| Progresso do aluno                 | Edição Back-end              | XXXXXXXXXXX         |
-| Progresso do aluno                 | Lista Front-end              | XXXXXXXXXXX         |
-| Progresso do aluno                 | Lista Back-end               | XXXXXXXXXXX         |
-|                                    |                              |                     |
-| Árvore curricular                  | Visualização Front-end       | XXXXXXXXXXX         |
-| Árvore curricular                  | Visualização Back-end        | XXXXXXXXXXX         |
-| Árvore curricular                  | Navegação Front-end          | XXXXXXXXXXX         |
-| Árvore curricular                  | Navegação Back-end           | XXXXXXXXXXX         |
-| Árvore curricular                  | Expansão de níveis Front-end | XXXXXXXXXXX       |
-| Árvore curricular                  | Expansão de níveis Back-end  | XXXXXXXXXXX       |
+tema                 função                  integrante
+Banco de dados       Criação tbs             Arthur
+Banco de dados       Criação permissões      Thiago
+Usuários             Cadastro Front-end      Angeline
+Usuários             Cadastro Back-end       Thiago
+Usuários             Lista Front-end         Angeline
+Usuários             Lista Back-end          Angeline
+Curso                Cadastro Front-end      Isabella
+Curso                Cadastro Back-end       Arthur
+Curso                Lista Front-end         Arthur
+Curso                Lista Back-end          Arthur
+Disciplina           Cadastro Front-end      Angeline
+Disciplina           Cadastro Back-end       Angeline
+Matéria              Cadastro Front-end      Arthur
+Matéria              Cadastro Back-end       Arthur
+Matéria              Lista Front-end         Arthur
+Matéria              Lista Back-end          Arthur
+Conteúdo             Cadastro Front-end      Guilherme
+Permissões           Cadastro Front-end      Emanuella
+Permissões           Cadastro Back-end       Thiago
+Permissões           Lista Front-end         Emanuella
+Permissões           Lista Back-end          Thiago
+
+
+## Observações
+
+    A quantidade de tarefas designadas feitas:
+    Emanuella Pimentel Machado          >100%
+    Arthur Henrique Oliveira Melo       >100%
+    Thiago Hermont Siqueira             100%
+    Angeline Grate Moreira              100%
+    Isabella Oliveira Dias              40%
+    Guilherme Rocha Martins da Costa    30%
 
 
 ## Estrutura do projeto

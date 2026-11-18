@@ -22,8 +22,7 @@ $disciplinas = bd_select(
                FROM disciplinas_relacionadas dr
                JOIN disciplinas p ON p.id_disciplina = dr.id_disciplina_pai
               WHERE dr.id_disciplina_filha = d.id_disciplina) AS prerequisitos
-       FROM disciplinas d
-      ORDER BY d.nome_disciplina ASC"
+       FROM disciplinas d"
 );
 $total = count($disciplinas);
 ?>

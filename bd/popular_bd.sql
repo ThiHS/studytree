@@ -354,3 +354,15 @@ SELECT '202600000002', `id_permissao`
    );
 
 COMMIT;
+
+INSERT INTO usuario (num_matricula, nome, email, telefone, senha) VALUES
+('2024001', 'João Pedro Silva', 'joao.silva@email.com', '(31) 99912-3456', 'senha123'),
+('2024002', 'Maria Eduarda Santos', 'maria.santos@email.com', '(31) 99823-4567', 'senha123'),
+('2024003', 'Lucas Oliveira Costa', 'lucas.costa@email.com', '(31) 99734-5678', 'senha123'),
+('2024004', 'Ana Clara Ferreira', 'ana.ferreira@email.com', '(31) 99645-6789', 'senha123'),
+('2024005', 'Gabriel Henrique Souza', 'gabriel.souza@email.com', '(31) 99556-7890', 'senha123'),
+('2024006', 'Beatriz Almeida Rocha', 'beatriz.rocha@email.com', '(31) 99467-8901', 'senha123'),
+('2024007', 'Pedro Henrique Lima', 'pedro.lima@email.com', '(31) 99378-9012', 'senha123'),
+('2024008', 'Isabela Martins Ribeiro', 'isabela.ribeiro@email.com', '(31) 99289-0123', 'senha123'),
+('2024009', 'Matheus Rodrigues Alves', 'matheus.alves@email.com', '(31) 99190-1234', 'senha123'),
+('2024010', 'Camila Fernandes Gomes', 'camila.gomes@email.com', '(31) 99001-2345', 'senha123');

@@ -12,11 +12,12 @@
     $permissoes = [];
     $perpermissoes_padrao = ['Ver','Criar','Editar','Excluir'];
 
+   
     foreach($permissoes_bd as $id => $permissao) {
         if(!isset($permissoes[$permissao['nome_permissao']])) {
             $permissoes[$permissao['nome_permissao']] = [];
         }
-        $permissoes[$permissao['nome_permissao']][$id] = $permissao['descricao'];
+        $permissoes[$permissao['nome_permissao']][$permissao['id_permissao']] = $permissao['descricao'];
     }
 
     /* ----------------------
@@ -32,6 +33,7 @@
 
     //secretaria
     foreach($permissoes as $nome_permissao => $conteudo) {
+                             
         foreach ($conteudo as $key => $value) {
             if($value == "Ver") {
                 $cargo["secretaria"][$nome_permissao] = [$key => $value];
@@ -110,10 +112,11 @@
                             </thead>
                             
                             <?php foreach ($conteudo as $funcao => $valor) {?>
+                            
                                 <div class = checkbox>
                                     <tbody>
                                         <tr>
-                                            <td> <input type='checkbox' name=' permissao_<?= $funcao ?>' value=' <?= true ?>'>
+                                            <td> <input type='checkbox' name=' permissao_<?= $funcao ?>' value=' <?= $funcao ?>'>
                                             <label for='permissao'> <?= $valor?> </label> </td>
                                         </tr>
                                     </tbody>
@@ -130,6 +133,9 @@
             </section>
 
             <button type="submit" class= "botao_carg" > Salvar</button>
+            <div class="">
+                <a type="submit" class= "botao_carg" href="/studytree/frontend/curso/view_permissoes.php" > Ver Pérmissões</a>
+            </div>
         </form>
     </main>
 <?php require_once __DIR__ . "/../assets/utils/footer_padrao.php"; ?>
